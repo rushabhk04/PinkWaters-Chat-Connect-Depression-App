@@ -1,0 +1,149 @@
+.main-cards {
+    width: 1440px;
+    height: 952px;
+    top: 3500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.1); /* Add this line for a slightly darker background */
+
+  }
+  
+  .card-body {
+    width: 1120px;
+    height: auto;
+    top: 300px;
+    left: 160px;
+    gap: 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card-features {
+    width: 1120px;
+    height: auto;
+    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card-title {
+    width: 1120px;
+    height: 74px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 74px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #1F2D5A;
+  }
+  
+  .card-subtitle {
+    width: 1120px;
+    height: 29px;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    background-image: linear-gradient(0deg, #2F76DB, #2F76DB),
+      linear-gradient(0deg, #1F2D5A, #1F2D5A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+.card-frame {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-item img {
+  width: 80px;
+  height: 80px;
+}
+
+.card-item h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2D5A;
+}
+
+.card-item p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+}
+/* Add this CSS to your existing styles */
+
+.bottomFrame {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 10px;
+  width: 1120px; /* Set the width to 1,120px */
+  height: 57px; /* Set the height to 57px */
+}
+
+.butn {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 16px 32px; /* Set the padding as needed */
+  border-radius: 16px;
+  border: 2px;
+  background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+  width: 219px; /* Set the width to 219px */
+  height: 57px; /* Set the height to 57px */
+  gap: 20px;
+}
+
+
+
+.butn:hover {
+  background: linear-gradient(260deg, rgb(254, 48, 114), rgb(255, 89, 64));
+}
+/* Add these styles to your CSS file */
+
+
+
+
+
+
+
+.card-box {
+  background-color: #fff; /* Background color for the card boxes */
+  border-radius: 10px; /* Add rounded corners to the boxes */
+  padding: 20px; /* Adjust padding as needed to create spacing around the cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  margin: 20px; /* Adjust margin to control the space between boxes */
+}
+
+.img_divider {
+  width: 1440px;
+  height: 341px;
+  top: 4316px;
+  color: #FFFFFF;
+  position: relative; /* To contain the image */
+}
+
+.img_divider img {
+  top: -40px; /* Adjust as needed */
+  position: absolute;
+  object-fit: cover; /* This property ensures the image covers its container */
+  display: none;
+  z-index: -1;
+ 
+ 
+}

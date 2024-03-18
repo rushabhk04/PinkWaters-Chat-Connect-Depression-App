@@ -1,0 +1,16 @@
+{
+  "name": "pinkwaters",
+  "version": "1.0.0",
+  "description": "Rediscover calmness, strengthen your mental resilience, and live a more peaceful life with PinkWaters. Start your journey toward inner harmony today. This app helps you to connect to peers like you. Our goal is to have an application for like minded people to connect and relieve their stress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.3"
+  }
+}

@@ -1,0 +1,114 @@
+
+.main-container {
+    width: 1440px;
+    height: 780px;
+    position: relative;
+    background-size: cover;
+    background-image: url(../../images/homeImages/comp3Images/section05_BG.png);
+  }
+  
+  .inner-container {
+    width: 1115px;
+    height: 487px;
+    position: absolute;
+    top: 126px;
+    left: 160px;
+  }
+  
+  .how-it-works {
+    width: 147px;
+    height: 40px;
+    padding: 8px, 12px, 8px, 12px;
+    background: #ffece1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .how-it-works-text {
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.94px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 123px;
+    height: 24px;
+    color: #ee6f13;
+    white-space: nowrap; /* Prevent line breaks */
+  }
+  
+  .C_text {
+    width: 640px;
+    height: 370px;
+    top: 64px;
+    gap: 28px;
+    display: flex; /* Add this */
+    align-items: flex-start; /* Adjust alignment as needed */
+
+
+  }
+  
+  .frame5 {
+    width: 640px;
+    height: 285px;
+    gap: 40px;
+  }
+  
+  .C_Feature-title {
+    width: 640px;
+    height: 148px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .C_Feature-title-text {
+    font-family: Segoe UI;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 74.48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1f2d5a;
+  }
+  
+  .C_paragraph {
+    width: 640px;
+    height: 97px;
+    gap: 8px;
+  }
+  
+  .C_paragraph-divider {
+    width: 64px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: #2f76db;
+  }
+  
+  .intro {
+    width: 640px;
+    height: 81px;
+    gap: 10px;
+  }
+  
+  .C_paragraph-text {
+    width: 640px;
+    height: 81px;
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1f2d5a;
+  }
+ 
+  .chart {
+    width: 538.5px;
+    height: 403.26px;
+    top: 83.74px;
+    left: 576px;
+  }
+  
