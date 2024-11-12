@@ -3,8 +3,8 @@
 Rediscover calmness, strengthen your mental resilience, and live a more peaceful life with PinkWaters. Start your journey toward inner harmony today. This app helps you to connect to peers like you. Our goal is to have an application for like minded people to connect and relieve their stress.
 
 ---
-title: ZADD  
-description: Documentation for the DiceDB command ZADD with options  
+title: ZADD
+description: Documentation for the DiceDB command ZADD
 ---
 
 The `ZADD` command in DiceDB is used to add one or more members to a sorted set stored at the specified key. If a member already exists, its score is updated. This command supports various options - NX, XX, GT, LT, CH, INCR to control its behavior, such as conditional additions and score comparisons.
@@ -104,21 +104,21 @@ Creating a sorted set `myzset` with members and their scores. These examples inc
 
     ```bash
     127.0.0.1:7379> ZADD myzset NX 3 "member3" 2 "member2"
-    (integer) 1  # Only "member3" is added, as "member2" already exists
+    (integer) 1 
     ```
 
 2. The `XX` flag only updates members that already exist in the sorted set.
 
     ```bash
     127.0.0.1:7379> ZADD myzset XX 4 "member1" 5 "new_member"
-    (integer) 1  # Only "member1" is updated, as "new_member" does not exist
+    (integer) 1  
     ```
 
 3. The `LT` flag updates a member’s score only if the new score is less than the current score.
 
     ```bash
     127.0.0.1:7379> ZADD myzset LT 0 "member1" 3 "member2"
-    (integer) 1  # Only "member1" is updated, as 0 < current score 1
+    (integer) 1  
     ```
 
 4. The `GT` flag updates a member’s score only if the new score is greater than the current score.
@@ -163,5 +163,42 @@ Creating a sorted set `myzset` with members and their scores. These examples inc
     (integer) 8  
     ```
 
+## Invalid usages
 
+1. Using `NX`, `XX`, `LT`, `CH`, and `INCR` Together.
 
+    ```bash
+    127.0.0.1:7379> ZADD myzset NX XX LT CH INCR 20 "member1"
+    (error) ERR xx and nx options at the same time are not compatible
+    ```
+
+2. Using `NX`, `LT`, `GT`, and `INCR` Together.
+
+    ```bash
+    127.0.0.1:7379> ZADD myzset NX LT GT INCR 20 "member1"
+    (error) ERR gt and LT and NX options at the same time are not compatible
+    ```
+3. Using `INCR` with `XX` and Multiple Members.
+
+    ```bash
+    127.0.0.1:7379> ZADD myzset XX INCR 20 "member1" 25 "member2"
+    (error) ERR incr option supports a single increment-element pair
+    ```
+
+4. Using `GT` with `INCR` When the Increment Results in a Score Less Than the Current Score**
+
+    The `GT` flag only updates the score if the new score after incrementing is greater than the current score. If the increment causes the score to be less than or equal to the current score, it returns `(nil)` to indicate no update was made.
+
+    ```bash
+    127.0.0.1:7379> ZADD myzset GT INCR -5 "member15"
+    (nil)
+    ```
+
+5. Using `LT` with `INCR` When the Increment Results in a Score Greater Than the Current Score**
+
+    The `LT` flag only updates the score if the new score after incrementing is less than the current score. If the increment causes the score to be greater than or equal to the current score, it returns `(nil)` to indicate no update was made.
+
+    ```bash
+    127.0.0.1:7379> ZADD myzset LT INCR 5 "member14"
+    (nil) 
+    ```
